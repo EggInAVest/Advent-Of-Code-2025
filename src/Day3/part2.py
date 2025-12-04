@@ -11,8 +11,7 @@ def main():
             lineLen = len(line)
             searchArea = line
             while freeSlots > 0:
-                areaEnd = len(searchArea) - freeSlots + 1
-                num = max(searchArea[:areaEnd])
+                num = max(searchArea[:len(searchArea) - freeSlots + 1])
                 searchArea = searchArea[searchArea.index(num) + 1:]
                 finalStr += num
                 freeSlots -= 1
